@@ -23,12 +23,11 @@
 }
         button {
         background-color: #FF2DCF;
-        color: white;
+        color: black;
         padding: 1px;
         width: 25px;
         height: 25px;
         font-size: 18px;
-
 
         }
     #popup {
@@ -44,7 +43,7 @@
         text-align:center;
         position: relative; left: 50%;
         transform: translateX(-50%);
-        width:25%;
+        width:50%;
         height:50%;
         z-index:15;
         border: none;
@@ -54,6 +53,12 @@
 </head>
 
 <body bgcolor="black">
+<div id="popup">
+    <video controls="loop", id="about">
+<source src=https://soundandmovementiso.s3.amazonaws.com/aboutvideo.mp4 type="video/mp4">
+            </source>
+        </video>
+        
 </div>
 
     <div id="clip1">
@@ -108,26 +113,13 @@
         </script>
     </div>
 
-<button onclick="ShowDiv()">?!</button>
+    <button onclick="ShowDiv()">?!</button>
 <script>
     function ShowDiv() {
         document.getElementById("popup").style.display = "block";
     }
 </script>
 
-    <div id="popup">
-    <video controls="loop", id="about">
-<source src=https://soundandmovementiso.s3.amazonaws.com/aboutvideo.mp4 type="video/mp4">
-            </source>
-        </video>
-        <button onclick="CloseDiv()">X</button>
-<script>
-    function CloseDiv() {
-        document.getElementById("popup").style.display = "none";
-    }
-</script>
-
-    
 </body>
 
 </html>
