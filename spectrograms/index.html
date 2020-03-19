@@ -64,7 +64,7 @@
         <script>
             let video = document.querySelector('video');
         document.getElementById('clip1').addEventListener('click', function() {
-            video.paused ? video.play() : video.pause();
+            video.load(); video.paused ? video.play() : video.pause();
         });
 
     </script>
