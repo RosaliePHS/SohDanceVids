@@ -57,20 +57,20 @@
 </div>
 
     <div id="clip1">
-        <video autoplay loop playsinline>
+        <video id="video1" autoplay loop playsinline>
             <source src=https://soundandmovementiso.s3.amazonaws.com/VideoFinalColors.mp4 type="video/mp4">
             </source>
         </video>
         <script>
             let video = document.querySelector('video');
         document.getElementById('clip1').addEventListener('click', function() {
-            video.load(); video.paused ? video.play() : video.pause();
+         video.paused ? video.play() : video.pause();
         });
 
     </script>
     </div>
     <div id="clip2">
-        <video id="video2" loop>
+        <video id="video2" autoplay loop playsinline>
             <source src=https://soundandmovementiso.s3.amazonaws.com/CarinitoFinalReColors.mp4 type="video/mp4">
             </source>
         </video>
@@ -83,7 +83,7 @@
     </script>
     </div>
     <div id="clip3">
-        <video id="video3" loop>
+        <video id="video3" autoplay loop playsinline>
             <source src=https://soundandmovementiso.s3.amazonaws.com/RockAnthemFinalColor.mp4 type="video/mp4">
             </source>
         </video>
@@ -96,7 +96,7 @@
     </script>
     </div>
     <div id="clip4">
-        <video id="video4" loop>
+        <video id="video4" autoplay loop playsinline>
             <source src=https://soundandmovementiso.s3.amazonaws.com/BBSFinal.mp4 type="video/mp4">
             </source>
         </video>
