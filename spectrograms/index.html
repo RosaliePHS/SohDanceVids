@@ -125,6 +125,9 @@
 <script>
     function CloseDiv() {
         document.getElementById("popup").style.display = "none";
+        document.getElementById("popup").addEventListener('click', function() {
+            about.pause();
+        });
     }
 </script>
 
