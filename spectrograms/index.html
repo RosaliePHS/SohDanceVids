@@ -74,7 +74,7 @@
 <div id="divgrid">
 
     <div id="clip1">
-        <video id="video1" loop playsinline preload="auto">
+        <video id="video1" loop playsinline poster="https://soundandmovementiso.s3.amazonaws.com/videoposter.png">
             <source src=https://soundandmovementiso.s3.amazonaws.com/VideoFinalColors.mp4 type="video/mp4">
             </source>
 
@@ -89,7 +89,7 @@
     </script>
     </div>
     <div id="clip2">
-        <video id="video2" loop playsinline preload="auto">
+        <video id="video2" loop playsinline poster="https://soundandmovementiso.s3.amazonaws.com/carinitoposter.png">
             <source src=https://soundandmovementiso.s3.amazonaws.com/CarinitoFinalReColors.mp4 type="video/mp4">
             </source>
         </video>
@@ -102,7 +102,7 @@
     </script>
     </div>
     <div id="clip3">
-        <video id="video3" loop playsinline preload="auto">
+        <video id="video3" loop playsinline poster="https://soundandmovementiso.s3.amazonaws.com/rockanthemposter.png">
             <source src=https://soundandmovementiso.s3.amazonaws.com/RockAnthemFinalColor.mp4 type="video/mp4">
             </source>
         </video>
@@ -115,12 +115,10 @@
     </script>
     </div>
     <div id="clip4">
-        <video id="video4" loop poster="kisspng-puggle-beagle-puppy-pet-sitting-png-pug-5b445f54925cb8.8716758015312075085995.png">
+        <video id="video4" loop playsinline poster="https://soundandmovementiso.s3.amazonaws.com/BBSposter.png">
             <source src=https://soundandmovementiso.s3.amazonaws.com/BBSFinal.mp4 type="video/mp4">
             </source>
-        
-<!--         <video poster="kisspng-puggle-beagle-puppy-pet-sitting-png-pug-5b445f54925cb8.8716758015312075085995.png">
- -->            </video>
+        </video>
         <script>
         let video4 = document.getElementById('video4');
         document.getElementById('clip4').addEventListener('click', function() {
@@ -133,7 +131,7 @@
 
 <div id="popup" style="position: fixed; top: 0; left: 0 width:100vw; height: :100vh; padding-top:50px;">
         <button onclick="CloseDiv()">X</button>
-    <video controls="loop", id="about", style="padding-top:10px;">
+    <video playsinline controls="loop", id="about", style="padding-top:10px;">
 <source src=https://soundandmovementiso.s3.amazonaws.com/aboutvideo.mp4 type="video/mp4">
             </source>
     </video>
