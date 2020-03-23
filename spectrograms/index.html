@@ -74,9 +74,10 @@
 <div id="divgrid">
 
     <div id="clip1">
-        <video id="video1" loop playsinline poster>
+        <video id="video1" loop playsinline preload="auto">
             <source src=https://soundandmovementiso.s3.amazonaws.com/VideoFinalColors.mp4 type="video/mp4">
             </source>
+
         </video>
         <script>
             let video = document.querySelector('video');
@@ -114,10 +115,12 @@
     </script>
     </div>
     <div id="clip4">
-        <video id="video4" loop playsinline preload="auto">
+        <video id="video4" loop poster="kisspng-puggle-beagle-puppy-pet-sitting-png-pug-5b445f54925cb8.8716758015312075085995.png">
             <source src=https://soundandmovementiso.s3.amazonaws.com/BBSFinal.mp4 type="video/mp4">
             </source>
-        </video>
+        
+<!--         <video poster="kisspng-puggle-beagle-puppy-pet-sitting-png-pug-5b445f54925cb8.8716758015312075085995.png">
+ -->            </video>
         <script>
         let video4 = document.getElementById('video4');
         document.getElementById('clip4').addEventListener('click', function() {
