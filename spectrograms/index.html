@@ -2,11 +2,11 @@
 <html>
 
 <head>
-    <title>SoundMovement</title>
+    <title>Sound & Movement Study</title>
 </script>
     <style>        
 
-        body {
+        #divgrid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(2, 1fr);
@@ -19,15 +19,25 @@
         video {
    
     width: 100%;
-    border: white solid 1px;
+    
 }
+
+@media (max-width: 768px) {
+        #divgrid {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+            grid-column-gap: 0px;
+            margin: 0px;
+        }
+    }
+
         button {
         background-color: black;
         color: white;
         padding: 1px;
         width: 2.5vw;
         height: 3vh;
-        font-size: .25em;
+        font-size: 1em;
 
 
         }
@@ -35,17 +45,18 @@
         position:fixed;
         width:100%;
         height:100%;
-        background-color:rgba(0,0,0,.8);
+        background-color:rgba(0,0,0,.85);
         z-index:10;
         display: none;
+
     }
 
     #about {
         text-align:center;
         position: relative; left: 50%;
         transform: translateX(-50%);
-        width:25%;
-        height:50%;
+/*        width:100%;
+*/        height:75%;
         z-index:15;
         border: none;
     }
@@ -54,7 +65,13 @@
 </head>
 
 <body bgcolor="black">
-</div>
+    <button onclick="ShowDiv()">?!</button>
+<script>
+    function ShowDiv() {
+        document.getElementById("popup").style.display = "block";
+    }
+</script>
+<div id="divgrid">
 
     <div id="clip1">
         <video id="video1" loop playsinline>
@@ -97,7 +114,7 @@
     </script>
     </div>
     <div id="clip4">
-        <video id="video4" loop playsinline>
+        <video id="video4" loop playsinline preload="auto">
             <source src=https://soundandmovementiso.s3.amazonaws.com/BBSFinal.mp4 type="video/mp4">
             </source>
         </video>
@@ -108,30 +125,26 @@
         });
         </script>
     </div>
+ </div>
 
-<button onclick="ShowDiv()">?!</button>
-<script>
-    function ShowDiv() {
-        document.getElementById("popup").style.display = "block";
-    }
-</script>
 
-    <div id="popup">
-    <video controls="loop", id="about">
+<div id="popup" style="position: fixed; top: 0; left: 0 width:100vw; height: :100vh; padding-top:50px;">
+        <button onclick="CloseDiv()">X</button>
+    <video controls="loop", id="about", style="padding-top:10px;">
 <source src=https://soundandmovementiso.s3.amazonaws.com/aboutvideo.mp4 type="video/mp4">
             </source>
-        </video>
-        <button onclick="CloseDiv()">X</button>
-<script>
-    function CloseDiv() {
-        document.getElementById("popup").style.display = "none";
-        document.getElementById("popup").addEventListener('click', function() {
+    </video>
+            <script>
+            function CloseDiv() {
+            document.getElementById("popup").style.display = "none";
+            document.getElementById("popup").addEventListener('click', function() {
             about.pause();
-        });
-    }
-</script>
+            });
+        }
+            </script>
+        </div>
 
-    
+   
 </body>
 
 </html>
